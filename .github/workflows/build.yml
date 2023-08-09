@@ -1,0 +1,28 @@
+name: build
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macOS-latest]
+        rust-version: [stable, nightly]
+    steps:
+      - uses: actions/checkout@v3
+      - uses: hecrj/setup-rust-action@v1
+        with:
+          rust-version: ${{ matrix.rust-version }}
+      - uses: actions/cache@v3
+        with:
+          path: ~/.cargo
+          key: ${{ runner.OS }}-rust-${{ hashFiles('**/Cargo.lock') }}
+          restore-keys: |
+            ${{ runner.OS }}-rust-
+            ${{ runner.OS }}-
+      - run: cargo install
+      - run: cargo climpy
+      - run: cargo check
+      - run: cargo build
