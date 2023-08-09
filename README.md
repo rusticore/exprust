@@ -1,4 +1,10 @@
-# Exprust
+<p align="center">
+  <img 
+    src="./assets/logo-banner.png"
+    alt="Exprust"
+    style="width:100%;"
+  />
+</p>
 
 ![build](https://github.com/iamando/exprust/workflows/build/badge.svg)
 ![license](https://img.shields.io/github/license/iamando/exprust?color=success)
