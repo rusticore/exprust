@@ -22,7 +22,6 @@ jobs:
           restore-keys: |
             ${{ runner.OS }}-rust-
             ${{ runner.OS }}-
-      - run: cargo install
       - run: cargo climpy
       - run: cargo check
       - run: cargo build
