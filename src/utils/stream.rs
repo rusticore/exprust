@@ -2,7 +2,7 @@ use std::io::Read;
 use std::io::Write;
 use std::net::TcpStream;
 
-pub fn handle_client(mut stream: TcpStream) {
+pub fn handle_connection(mut stream: TcpStream) {
   loop {
     let mut read = [0; 1028];
 
@@ -12,10 +12,17 @@ pub fn handle_client(mut stream: TcpStream) {
           break;
         }
 
-        stream.write_all(&read[0..n]).unwrap();
+        match stream.write_all(&read[0..n]) {
+          Ok(()) => {
+            println!("Connection established")
+          }
+          Err(e) => {
+            panic!("{}", e);
+          }
+        }
       }
-      Err(err) => {
-        panic!("{}", err);
+      Err(e) => {
+        panic!("{}", e);
       }
     }
   }
