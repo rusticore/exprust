@@ -16,7 +16,7 @@ fn main() {
         thread::spawn(move || handle_client(stream));
       }
       Err(err) => {
-        panic!("{}", err)
+        panic!("{}", err);
       }
     }
   }

@@ -12,10 +12,10 @@ pub fn handle_client(mut stream: TcpStream) {
           break;
         }
 
-        stream.write(&read[0..n]).unwrap();
+        stream.write_all(&read[0..n]).unwrap();
       }
       Err(err) => {
-        panic!("{}", err)
+        panic!("{}", err);
       }
     }
   }
