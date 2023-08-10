@@ -23,7 +23,7 @@ fn main() {
       }
     }
     Err(e) => {
-      panic!("{}", e)
+      panic!("{}", e);
     }
   }
 }

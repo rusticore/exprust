@@ -14,7 +14,7 @@ pub fn handle_connection(mut stream: TcpStream) {
 
         match stream.write_all(&buffer[0..n]) {
           Ok(()) => {
-            println!("Connection established")
+            println!("{}", String::from_utf8_lossy(&buffer));
           }
           Err(e) => {
             panic!("{}", e);
