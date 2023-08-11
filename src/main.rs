@@ -3,6 +3,9 @@ use std::{net::TcpListener, thread};
 use crate::utils::stream::handle_connection;
 
 mod utils {
+  pub mod http;
+  pub mod request;
+  pub mod response;
   pub mod stream;
 }
 
