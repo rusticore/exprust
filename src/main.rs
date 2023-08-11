@@ -1,13 +1,5 @@
+use exprust::stream::handle_connection;
 use std::{net::TcpListener, thread};
-
-use crate::utils::stream::handle_connection;
-
-mod utils {
-  pub mod http;
-  pub mod request;
-  pub mod response;
-  pub mod stream;
-}
 
 fn main() {
   let addr = "127.0.0.1:4000";
