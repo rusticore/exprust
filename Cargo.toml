@@ -2,12 +2,12 @@
 name = "exprust"
 version = "0.1.0"
 edition = "2021"
-description = "A web server framework for Rust"
-categories = ["server"]
-keywords = ["web-server", "server", "http"]
+description = "A minimalist, lightweight, framework for Rust"
+categories = ["http-server"]
+keywords = ["web-server", "server", "http", "minimalist", "lightweight"]
 authors = ["Ando <iamando@tuta.io>"]
 license = "MIT"
-repository = "https://github.com/iamando/exprust"
+repository = "https://github.com/exprust/exprust"
 
 [dependencies]
 serde = { version = "1.0", features = ["derive"] }
