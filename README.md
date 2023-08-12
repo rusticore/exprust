@@ -13,7 +13,7 @@ A minimalist, lightweight, framework for Rust
 
 # Information
 
-This package has been deprecated and is no longer maintained, please go to ![exprust](https://github.com/exprust/exprust)
+This package has been deprecated and is no longer maintained, please go to [exprust](https://github.com/exprust/exprust)
 
 ## Support
 
