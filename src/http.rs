@@ -1,4 +1,4 @@
-use crate::response::Response;
+use crate::types::response::Response;
 use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Default, Deserialize, Serialize, Clone, PartialEq, Eq)]
